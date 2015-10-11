@@ -1,0 +1,115 @@
+@font-face {
+        font-family: Bodoni;
+        src: url(../static/Bodoni.ttf);
+    }
+
+@font-face {
+        font-family: ADELE;
+        src :url(../static/adele-light-webfont.ttf);
+    }
+
+body {
+    background-image: url(../static/background.jpg);
+    background-repeat: repeat-y;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    height: 40%;
+}
+
+#image {
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+img {
+    display: inline;
+    border-radius: 10px;
+    width: 32%;
+}
+
+img:hover {
+    -webkit-transform:scale(1.5,1.5);
+    -moz-transform:scale(1.5,1.5);
+    -transform:scale(1.5,1.5);
+}
+
+ul {
+    display: block;
+    clear: left;
+    margin-bottom: 0px;
+    background-color: #F0EBB7;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 20px;
+}
+
+nav {
+    height: 60%;
+    width: 100%;
+    word-break: break-all;
+}
+
+h1 {
+    margin-top: 10px;
+    font-family: ADELE, serif;
+    font-size: 80px;
+    text-align: center;
+    color: #EACF88;
+    margin-bottom: 0px;
+}
+
+li {
+    font-family: Bodoni, serif;
+    color: #A14949;
+}
+
+p {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    height: 50px;
+    text-align: center;
+    font-size: 35px;
+    color: #EACF88;
+}
+
+li {
+    font-size: 28px;
+}
+
+a {
+    font-family: ADELE, serif;
+    font-weight: bold;
+    font-size: 60px;
+    color: #C9A26A;
+    border-radius: 20px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 45px;
+    margin-left: 35%;
+    margin-right: 35%;
+    background-color: #EEEFB3;
+}
+
+a:link, a:visited {
+    padding: 4px 10px 4px 10px;
+    border-top: 5px solid #EEEEEE;
+    border-left: 5px solid #EEEEEE;
+    border-bottom: 5px solid #717171;
+    border-right: 5px solid #717171;
+}
+
+a:hover {
+    padding: 5px 8px 3px 12px;
+    border-top: 5px solid #717171;
+    border-left: 5px solid #717171;
+    border-bottom: 5px solid #EEEEEE;
+    border-right: 5px solid #EEEEEE;
+}
