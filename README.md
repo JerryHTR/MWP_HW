@@ -1,2 +1,2 @@
 #README
-This is the homework1 of MWP, containing a recipe page and a home page with other resource files.
+These are the homework of MWP lesson.(MWP means Modern Web2.0 Programming)
