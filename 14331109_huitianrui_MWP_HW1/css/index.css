@@ -34,6 +34,7 @@ img {
     width: 32%;
 }
 
+/*The amplification effect of three images*/
 img:hover {
     -webkit-transform:scale(1.5,1.5);
     -moz-transform:scale(1.5,1.5);
@@ -83,6 +84,7 @@ li {
     font-size: 28px;
 }
 
+/*make the anchor look like a button*/
 a {
     font-family: ADELE, serif;
     font-weight: bold;
@@ -98,6 +100,7 @@ a {
     background-color: #EEEFB3;
 }
 
+/*press effect*/
 a:link, a:visited {
     padding: 4px 10px 4px 10px;
     border-top: 5px solid #EEEEEE;
