@@ -207,9 +207,9 @@ function sendFile(response, filePath, fileContents) {
     response.end(fileContents);
 }
 
-//搭建静态文件服务器
+// 搭建静态文件服务器
 function serveStatic(response, cache, absPath) {
-    if (cache[absPath]) { //在缓存中就直接获取
+    if (cache[absPath]) { // 在缓存中就直接获取
         sendFile(response, absPath, cache[absPath]);
     } else {
         fs.exists(absPath, function(exists) { // 判断文件是否存在硬盘中
