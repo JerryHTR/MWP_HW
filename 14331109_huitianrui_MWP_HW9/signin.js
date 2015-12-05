@@ -4,8 +4,8 @@ var path = require('path');
 var mime = require('mime');
 var querystring = require('querystring');
 var url = require('url');
-var cache = {};
-var users = [];
+var cache = {}; // 缓存静态文件
+var users = []; // 在内存中保存用户信息
 
 var server = http.createServer(function(request, response) {
     var filePath = false;
@@ -17,10 +17,12 @@ var server = http.createServer(function(request, response) {
     var userExist = false;
     var proparr = [];
 
+    //保存查询字符串中的所有属性
     for (var prop in queryjson) {
         proparr.push(prop);
     }
 
+    // 判断查询字符串中的username是否已注册
     for (var j = 0; j < users.length; j++) {
         if (users[j].username == queryjson.username) {
             userExist = true;
@@ -28,7 +30,8 @@ var server = http.createServer(function(request, response) {
         }
     }
 
-    if ('/favicon.ico' == pathname) { // 去除浏览器自带请求 favicon.ico
+    // 去除浏览器自带请求 favicon.ico
+    if ('/favicon.ico' == pathname) {
         return;
     }
 
@@ -39,6 +42,7 @@ var server = http.createServer(function(request, response) {
                 var absPath = './' + filePath;
                 serveStatic(response, cache, absPath);
             }
+            // 用户存在且查询字符串中只有username
             else if (userExist
             && proparr.length == 1 && proparr[0] == 'username') {
                 renderDetail(users[j], response, request);
@@ -48,6 +52,7 @@ var server = http.createServer(function(request, response) {
                 serveStatic(response, cache, htmlpath);
             }
         }
+        // 获取其他静态文件
         else {
             filePath = 'public' + pathname;
             var absPath = './' + filePath;
@@ -65,10 +70,12 @@ server.listen(8000, function() {
     console.log("Server listening on port 8000.");
 });
 
+// 添加新用户
 function addNewUser(request, response) {
     var userflag = false, idflag = false, phoneflag = false, emailflag = false;
     var userdata = "";
     var userjson = "";
+
     request.setEncoding('utf8');
     request.addListener('data', function(chunk) {
         userdata += chunk;
@@ -89,6 +96,8 @@ function addNewUser(request, response) {
                 emailflag = true;
             }
         }
+
+        // 信息重复时保存已填的内容再返回注册页
         if (userflag || idflag || phoneflag || emailflag) {
             var htmlpath = './public/index.html';
             var csspath = './public/css/index.css';
@@ -99,6 +108,7 @@ function addNewUser(request, response) {
             htmlfile = insertStr(htmlfile, userjson.phone);
             htmlfile = insertStr(htmlfile, userjson.email);
 
+            // 信息重复时插入错误提示
             if (userflag) {
                 htmlfile = conformErr(htmlfile, "<p style='display:inline-block; margin-left:5px;'>用户名重复</p>");
             }
@@ -116,7 +126,6 @@ function addNewUser(request, response) {
                 {'Content-Type': 'text/html'}
             );
             response.end(htmlfile);
-            //serveStatic(response, cache, htmlpath);
             serveStatic(response, cache, csspath);
             serveStatic(response, cache, jspath);
         } else {
@@ -126,6 +135,7 @@ function addNewUser(request, response) {
     });
 }
 
+// 保存用户已输入的内容
 function insertStr(oldstr, str) {
     var index = oldstr.indexOf('value=""');
     var firststr = oldstr.substring(0, index + 7);
@@ -134,6 +144,7 @@ function insertStr(oldstr, str) {
     return newstr;
 }
 
+// 信息重复时插入错误提示
 function conformErr(oldstr, str) {
     var index = oldstr.indexOf("</form>");
     var firststr = oldstr.substring(0, index);
@@ -142,6 +153,8 @@ function conformErr(oldstr, str) {
     return newstr;
 }
 
+// 动态返回详情页面
+// 不是wiki上说动态返回的吗求不黑啊==、
 function renderDetail(userjson, response, request) {
     response.writeHead(200, {"Content-Type": "text/html"});
     response.write("<!DOCTYPE html>");
@@ -178,12 +191,14 @@ function renderDetail(userjson, response, request) {
     response.end();
 }
 
+// 找不到文件时发送404错误
 function send404(response) {
     response.writeHead(404, {'Content-Type': 'text/plain'});
     response.write('Error 404: resource not found.');
     response.end();
 }
 
+// 发送找到的静态文件给浏览器
 function sendFile(response, filePath, fileContents) {
     response.writeHead(
             200,
@@ -192,13 +207,14 @@ function sendFile(response, filePath, fileContents) {
     response.end(fileContents);
 }
 
+//搭建静态文件服务器
 function serveStatic(response, cache, absPath) {
-    if (cache[absPath]) {
+    if (cache[absPath]) { //在缓存中就直接获取
         sendFile(response, absPath, cache[absPath]);
     } else {
-        fs.exists(absPath, function(exists) {
+        fs.exists(absPath, function(exists) { // 判断文件是否存在硬盘中
             if (exists) {
-                fs.readFile(absPath, function(err, data) {
+                fs.readFile(absPath, function(err, data) { // 存在就读取后存入缓存
                     if (err) {
                         send404(response);
                     } else {
