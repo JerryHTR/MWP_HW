@@ -17,7 +17,7 @@ var server = http.createServer(function(request, response) {
     var userExist = false;
     var proparr = [];
 
-    //保存查询字符串中的所有属性
+    // 保存查询字符串中的所有属性
     for (var prop in queryjson) {
         proparr.push(prop);
     }
