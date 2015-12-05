@@ -1,0 +1,102 @@
+@font-face {
+        font-family: DinC;
+        src: url(../static/DinC.ttf);
+    }
+
+body {
+    font-family: DinC, sans-serif;
+}
+
+h1, h2 {
+    margin-left: 28%;
+}
+
+button {
+    margin-left: 27.8%;
+    height: 30px;
+    font-family: DinC, sans-serif;
+    font-size: 17pt;
+    border-radius: 10px;
+}
+
+table {
+    border-right: 1px solid #949494;
+    border-bottom: 1px solid #949494;
+    width: 600px;
+    height: 200px;
+    margin: 10px auto 10px auto;
+    font-size: 18pt;
+}
+
+td {
+    border-left: 1px solid #949494;
+    border-top: 1px solid #949494;
+    font-weight: bold;
+}
+
+th {
+    background-color: #0A1A8F;
+    color: white;
+    text-align: left;
+    position: relative;
+}
+
+.up {
+    z-index: 1;
+}
+
+.pic1 {
+    position: absolute;
+    left: 194px;
+    top: 5px;
+}
+
+.pic2 {
+    position: absolute;
+    left:108px;
+    top: 5px;
+}
+
+.pic3 {
+    position: absolute;
+    left: 231px;
+    top: 5px;
+}
+
+.pic4 {
+    position: absolute;
+    left: 160px;
+    top: 5px;
+}
+
+.pic5 {
+    position: absolute;
+    left: 155px;
+    top: 5px;
+}
+
+.pic6 {
+    position: absolute;
+    left: 221px;
+    top: 5px;
+}
+
+.descend, .ascend {
+    visibility: hidden;
+}
+
+.alternate {
+    background-color: #DBDBDB;
+}
+
+.click1, .click2{
+    background-color: #58A9E2;
+}
+
+.click1 .descend, .click2 .ascend {
+    visibility: hidden;
+}
+
+.click1 .ascend, .click2 .descend {
+    visibility: visible;
+}

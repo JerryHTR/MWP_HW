@@ -1,0 +1,282 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+#at-plus-container {
+    position: absolute;
+    width: 546.4px;
+    bottom: 0;
+    left: 30%;
+    height: 320px;
+}
+
+/*delay time before info-bar return to the initial state*/
+#info-bar {
+    background-color: gray;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    border-radius: 50%;
+    position: absolute;
+    left: 260px;
+    bottom: 100px;
+    opacity: 0;
+    transition: all 0.4s linear 0.8s;
+    -moz-transition:all 0.4s linear 0.8s; /* Firefox 4 */
+    -webkit-transition: all 0.4s linear 0.8s; /* Safari and Chrome */
+    -o-transition: all 0.4s linear 0.8s; /* Opera */
+}
+
+.info {
+    height: 100%;
+    position: relative;
+}
+
+.info ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 50%;
+    width: 50%;
+    height: 100%;
+    padding-top: 8%;
+    padding-left: 25%;
+}
+
+.info ul img {
+    float: left;
+}
+
+.user {
+    margin-bottom: 5px;
+    margin-left: 11px;
+}
+
+.user span {
+    color: white;
+    font-weight: bold;
+    font-size: 16pt;
+}
+
+.user img {
+    margin-right: 8px;
+    width: 27px;
+    height: 27px;
+}
+
+.comment {
+    position: absolute;
+    left: 44px;
+    bottom: 75px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.posted {
+    position: absolute;
+    margin-right: 10px;
+    bottom: 29px;
+    left: 32px;
+}
+
+.posted span {
+    position: relative;
+    color: #2FE29B;
+    font-weight: bold;
+    top: 4px;
+}
+
+.posted img {
+    margin-right: 12px;
+    width: 28px;
+    height: 28px;
+}
+
+.comment img {
+    margin-right: 12px;
+    margin-top: 14px;
+    width: 33px;
+    height: 33px;
+}
+
+.comment span {
+    color: white;
+    font-weight: bold;
+    font-size: 24pt;
+    position: relative;
+    top: 9px;
+}
+
+.like {
+    position: absolute;
+    left: 101px;
+    bottom: 27px;
+}
+
+.like span {
+    color: #2FE29B;
+    font-weight: bold;
+    position: relative;
+    top: 2px;
+}
+
+.like img {
+    margin-right: 12px;
+    width: 28px;
+    height: 28px;
+}
+
+#control-ring {
+    position: absolute;
+    left: 15px;
+    bottom: 37px;
+}
+
+/* delay effects for all the buttons */
+.button {
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    background-color: gray;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 83px;
+    left: 255px;
+    opacity: 0;
+    transition: all 0.4s linear 0.8s;
+    -moz-transition:all 0.4s linear 0.8s; /* Firefox 4 */
+    -webkit-transition: all 0.4s linear 0.8s; /* Safari and Chrome */
+    -o-transition: all 0.4s linear 0.8s; /* Opera */
+}
+
+.mask {
+    background-image: url(assets/images/nomask.png);
+}
+
+.history {
+    background-image: url(assets/images/history.png);
+}
+
+.message {
+    background-image: url(assets/images/message.png);
+    overflow: visible;
+}
+
+.setting {
+    background-image: url(assets/images/setting.png);
+}
+
+.sign {
+    background-image: url(assets/images/signin.png);
+}
+
+.unread {
+    margin-left: 29px;
+    display: block;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+    z-index: 2;
+    color: white;
+}
+
+.icon-wrap {
+    width: 74px;
+    height: 74px;
+    /*bottom: 38px;
+    left: 230px;*/
+    margin: 165px auto 50px auto;
+    z-index: 10;
+}
+
+.icon {
+    background-image: url(assets/images/atplus_white.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: grey;
+    width: 33px;
+    height: 33px;
+    margin: 20px auto;
+    border-radius: 50%;
+    transition:all 0.2s linear 1.2s;
+    -moz-transition:all 0.2s linear 1.2s; /* Firefox 4 */
+    -webkit-transition:all 0.2s linear 1.2s; /* Safari and Chrome */
+    -o-transition:all 0.2s linear 1.2s; /* Opera */
+}
+
+.icon-wrap:hover .icon {
+    transition:all 0.4s linear;
+    -moz-transition:all 0.4s linear; /* Firefox 4 */
+    -webkit-transition:all 0.4s linear; /* Safari and Chrome */
+    -o-transition:all 0.4s linear; /* Opera */
+    width: 74px;
+    height: 74px;
+    margin: 0 auto;
+    background-image: url(assets/images/atplus_green.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(48, 63, 159, 1);
+}
+
+/* transition effects for all the buttons */
+.icon-wrap:hover #info-bar {
+    width: 187px;
+    height: 187px;
+    opacity: 1;
+    transform: translate(-80px,-69px);
+    transition:all 0.4s linear;
+    -moz-transition:all 0.4s linear; /* Firefox 4 */
+    -webkit-transition:all 0.4s linear; /* Safari and Chrome */
+    -o-transition:all 0.4s linear; /* Opera */
+}
+
+/* transitin effects for all the buttons */
+.icon-wrap:hover .button {
+    transition:all 0.4s linear;
+    -moz-transition:all 0.4s linear; /* Firefox 4 */
+    -webkit-transition:all 0.4s linear; /* Safari and Chrome */
+    -o-transition:all 0.4s linear; /* Opera */
+}
+
+.icon-wrap:hover .mask {
+    width: 40px;
+    height: 40px;
+    opacity: 1;
+    transform: translate(-90px,-6px);
+}
+
+.icon-wrap:hover .history {
+    width: 40px;
+    height: 40px;
+    opacity: 1;
+    transform: translate(-103px,42px);
+}
+
+.icon-wrap:hover .message {
+    overflow: visible;
+    width: 40px;
+    height: 40px;
+    opacity: 1;
+    transform: translate(-82px,89px);
+}
+
+.icon-wrap:hover .setting {
+    width: 40px;
+    height: 40px;
+    opacity: 1;
+    transform: translate(-38px,120px);
+}
+
+.icon-wrap:hover .sign {
+    width: 40px;
+    height: 40px;
+    opacity: 1;
+    transform: translate(14px,116px);
+}

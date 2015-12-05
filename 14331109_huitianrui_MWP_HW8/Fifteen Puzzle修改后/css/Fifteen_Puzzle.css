@@ -1,0 +1,213 @@
+@font-face {
+        font-family: Bodoni;
+        src: url(../static/Bodoni.ttf);
+    }
+
+html {
+    background: url('../static/back.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+#text {
+    width: 800px;
+    margin: 64px auto 20px auto;
+}
+
+p {
+    color: white;
+    display: inline-block;
+    font-family: Bodoni, sans-serif;
+    font-size: 30pt;
+    width: 216px;
+    font-weight: bold;
+}
+
+#time {
+    margin-left: 66px;
+}
+
+#restart {
+    height: 50px;
+    background-color: #7F7979;
+    font-family: Bodoni, sans-serif;
+    font-size: 23pt;
+    color: white;
+    border-radius: 10px;
+    margin-left: 15px;
+}
+
+#mode {
+    height: 50px;
+    background-color: #7F7979;
+    font-family: Bodoni, sans-serif;
+    font-size: 23pt;
+    color: white;
+    border-radius: 10px;
+    margin-left: 56px;
+}
+
+#restore {
+    height: 50px;
+    background-color: #7F7979;
+    font-family: Bodoni, sans-serif;
+    font-size: 23pt;
+    color: white;
+    border-radius: 10px;
+    position: fixed;
+    left: 934px;
+    bottom: 30px;
+}
+
+#step {
+    margin-right: -45px;
+}
+
+#puzzle {
+    width: 32.21%;
+    height: 440px;
+    position: absolute;
+    left: 33.4%;
+    top: 26%;
+}
+
+#puzzle div {
+    width: 24.9%;
+    height: 24.9%;
+    background-image: url('../static/puzzle.jpg');
+    display: inline-block;
+    border: 1px gray solid;
+    z-index: 1;
+}
+
+#puzzle div:hover {
+    -webkit-transform:scale(1.05,1.05);
+    -moz-transform:scale(1.05,1.05);
+    -transform:scale(1.05,1.05);
+}
+
+#puzzle0 {
+    background-position: 0% 0%;
+}
+
+#puzzle1 {
+    background-position: 33.33% 0%;
+}
+
+#puzzle2 {
+    background-position: 66.66% 0%;
+}
+
+#puzzle3 {
+    background-position: 100% 0%;
+}
+
+#puzzle4 {
+    background-position: 0% 33.33%;
+}
+
+#puzzle5 {
+    background-position: 33.33% 33.33%;
+}
+
+#puzzle6 {
+    background-position: 66.66% 33.33%;
+}
+
+#puzzle7 {
+    background-position: 100% 33.33%;
+}
+
+#puzzle8 {
+    background-position: 0% 66.66%;
+}
+
+#puzzle9 {
+    background-position: 33.33% 66.66%;
+}
+
+#puzzle10 {
+    background-position: 66.66% 66.66%;
+}
+
+#puzzle11 {
+    background-position: 100% 66.66%;
+}
+
+#puzzle12 {
+    background-position: 0% 100%;
+}
+
+#puzzle13 {
+    background-position: 33.33% 100%;
+}
+
+#puzzle14 {
+    background-position: 66.66% 100%;
+}
+
+#puzzle15 {
+    background-position: 100% 100%;
+}
+
+.puzzle0, .puzzle1, .puzzle2, .puzzle3 {
+    position: absolute;
+    top: 0;
+}
+
+.puzzle4, .puzzle5, .puzzle6, .puzzle7 {
+    position: absolute;
+    top: 25.3%;
+}
+
+.puzzle8, .puzzle9, .puzzle10, .puzzle11 {
+    position: absolute;
+    top: 50.6%;
+}
+
+.puzzle12, .puzzle13, .puzzle14, .puzzle15 {
+    position: absolute;
+    top: 75.95%;
+}
+
+.puzzle0, .puzzle4, .puzzle8, .puzzle12 {
+    position: absolute;
+    left: 0;
+}
+
+.puzzle1, .puzzle5, .puzzle9, .puzzle13 {
+    position: absolute;
+    left: 25.3%;
+}
+
+.puzzle2, .puzzle6, .puzzle10, .puzzle14 {
+    position: absolute;
+    left: 50.6%;
+}
+
+.puzzle3, .puzzle7, .puzzle11, .puzzle15 {
+    position: absolute;
+    left: 75.9%;
+}
+
+#puzzle15 {
+    border-style: none!important;
+    z-index: 0!important;
+}
+
+.change {
+    color: #7F7979;
+    display: inline-block;
+    font-family: Bodoni, sans-serif;
+    font-size: 30pt;
+    width: 216px;
+    font-weight: bold;
+}

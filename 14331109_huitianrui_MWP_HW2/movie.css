@@ -1,0 +1,177 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-image: url('http://my.ss.sysu.edu.cn/wiki/download/attachments/7045968/background.png?version=1&modificationDate=1268896312000');
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+#banner {
+    width: 100%;
+    background-image: url('http://my.ss.sysu.edu.cn/wiki/download/attachments/7045968/bannerbackground.png?version=1&modificationDate=1268896312000');
+    text-align: center;
+    height: 50px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 24pt;
+    font-weight: bold;
+    font-family: Tahoma, Verdana, sans-serif;
+}
+
+#wrapper {
+    width: 800px;
+    margin: 0px auto;
+    border: 4px solid gray;
+    overflow: hidden;
+}
+
+#mainbody {
+    width: 550px;
+    float: left;
+    overflow: hidden;
+}
+
+#side {
+    width: 250px;
+    float: right;
+    overflow: hidden;
+}
+
+#generaloverview img {
+    float: right;
+}
+
+#generaloverview {
+    overflow: hidden;
+}
+
+#rotten {
+    background-image: url('http://my.ss.sysu.edu.cn/wiki/download/attachments/7045968/rottenbackground.png?version=1&modificationDate=1268896385000');
+    height: 83px;
+    line-height: 91px;
+}
+
+#rotten img {
+    float: left;
+}
+
+.red {
+    font-weight: bold;
+    font-size: 48pt;
+    color: red;
+}
+
+.total {
+    font-weight: bold;
+    font-size: 8pt;
+    color: white;
+}
+
+#staff {
+    font-size: 8pt;
+    font-family: Arial, sans-serif;
+    width: 250px;
+    background-color: #A2B964;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    clear: right;
+}
+
+dl {
+    margin: 0;
+}
+
+dt {
+    font-weight: bold;
+    margin: 1em;
+    margin-bottom: 0;
+}
+
+dd {
+    padding-right: 10px;
+    margin-left: 49px;
+}
+
+dd a {
+    color: blue;
+}
+
+#text {
+    overflow: hidden;
+}
+
+#text div {
+    width: 47%;
+    margin-bottom: 13px;
+    margin-top: 2%;
+}
+
+#text div.left {
+    float: left;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+#text div.right {
+    float: right;
+    margin-left: 0;
+    margin-right: 2%;
+}
+
+#text p.comment {
+    border: solid gray;
+    border-width: 2px;
+    background-color: #E1D697;
+    padding: 8px;
+    margin: 0;
+    overflow: hidden;
+}
+
+#text p.comment img {
+    float: left;
+    margin-right: 5px;
+}
+
+#text p.people {
+    font-size: 8pt;
+    overflow: hidden;
+}
+
+#text p.people img {
+    float: left;
+    margin-right: 5px;
+}
+
+#text p.people span {
+    font-style: italic;
+}
+
+#text q {
+    font-weight: bold;
+    font-size: 8pt;
+    display: block;
+}
+
+#footer {
+    font-size: 8pt;
+    width: 100%;
+    height: 20px;
+    clear: both;
+    text-align: center;
+    background-color: #A2B964;
+    margin: 0;
+    line-height: 20px;
+}
+
+a.css {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+a.xhtml {
+    position: fixed;
+    bottom: 32px;
+    right: 0;
+}

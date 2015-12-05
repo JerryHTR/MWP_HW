@@ -1,0 +1,86 @@
+@font-face {
+        font-family: Pletakrutuk;
+        src: url('../static/Pletakrutuk.otf');
+    }
+
+@font-face {
+        font-family: logo;
+        src: url('../static/logo.ttf');
+    }
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-image: url('../static/conan.jpg');
+}
+
+header h1 {
+    margin-top: 110px;
+    margin-left: 45px;
+    font-family: logo;
+    font-size: 37pt;
+    color: white;
+}
+
+.intro1, .intro2 {
+    font-family: logo;
+    font-size: 42pt;
+    color: white;
+    white-space: pre;
+}
+
+.intro1 {
+    position: fixed;
+    right: 60px;
+    top: -60px;
+}
+
+.intro2 {
+    position: absolute;
+    right: 155px;
+    top: -60px;
+}
+
+#calculator {
+    width: 500px;
+    margin-top: 15px;
+    margin-left: 15px;
+    padding: 10px;
+    height: 410px;
+    border-radius: 10px;
+}
+
+input[name="expression"] {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-style: none;
+    height: 40px;
+    font-size: 25pt;
+    text-align: right;
+}
+
+#buttons {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 10px;
+    height: 370px;
+}
+
+input[type="button"] {
+    width: 22.75%;
+    margin-left: 0;
+    margin-right: 1.2%;
+    height: 18.4%;
+    margin-bottom: 1.7%;
+    font-size: 40pt;
+    color: white;
+    font-family: Pletakrutuk, sans-serif;
+    background-image: url('../static/brown.jpg');
+}
+
+input[name="right"] {
+    margin-right: 0;
+}

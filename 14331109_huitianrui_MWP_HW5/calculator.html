@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>calculator</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <link rel="stylesheet" type="text/css" href="css/calculator.css">
+    </head>
+
+    <body>
+    <header>
+        <h1>真実はいつもひとつ！</h1>
+    </header>
+
+    <div id="calculator">
+        <form>
+            <!-- 设置readonly属性限制用户注入，只能通过按钮输入信息 -->
+            <input type="text" name="expression" id="expression" value="" readonly="readonly" />
+            <div id="buttons">
+                <input type="button" value="7">
+                <input type="button" value="8">
+                <input type="button" value="9">
+                <input type="button" value="/" name="right">
+
+                <input type="button" value="4">
+                <input type="button" value="5">
+                <input type="button" value="6">
+                <input type="button" value="*" name="right">
+
+                <input type="button" value="1">
+                <input type="button" value="2">
+                <input type="button" value="3">
+                <input type="button" value="-" name="right">
+
+                <input type="button" value="0">
+                <input type="button" value=".">
+                <input type="button" value="←">
+                <input type="button" value="+" name="right">
+
+                <input type="button" value="(">
+                <input type="button" value=")">
+                <input type="button" value="CE">
+                <input type="button" value="=" name="right">
+            </div>
+
+            <h1 class="intro1">
+                名
+                探
+                偵
+                コ
+                ナ
+                ン
+                映
+                画
+                第
+                20
+                弾
+            </h1>
+            <h1 class="intro2">
+                電
+                卓
+                謎
+                の
+                メ
+                ッ
+                セ
+                ー
+                ジ
+            </h1>
+
+        </form>
+    </div>
+    <script type="text/javascript" src="js/calculator.js"></script>
+    </body>
+</html>
