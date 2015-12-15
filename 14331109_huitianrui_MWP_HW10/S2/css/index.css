@@ -1,0 +1,228 @@
+@font-face {
+        font-family: yayuan;
+        src: url(../assets/yayuan.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: yayuan, Verdana, Tahoma, sans-serif;
+}
+
+#at-plus-container {
+    position: absolute;
+    width: 546.4px;
+    bottom: 0;
+    left: 30%;
+    height: 320px;
+}
+
+/*delay time before info-bar return to the initial state*/
+#info-bar {
+    background-color: gray;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    border-radius: 50%;
+    position: absolute;
+    left: 260px;
+    bottom: 100px;
+    opacity: 0;
+    transition: all 0.4s linear 0.8s;
+    -moz-transition:all 0.4s linear 0.8s; /* Firefox 4 */
+    -webkit-transition: all 0.4s linear 0.8s; /* Safari and Chrome */
+    -o-transition: all 0.4s linear 0.8s; /* Opera */
+}
+
+.info {
+    height: 100%;
+    position: relative;
+    -webkit-transition: background-color 0.8s linear;
+}
+
+.info p {
+    color: #1EC385;
+    position: absolute;
+    left: 59px;
+    top: -8px;
+    font-size: 69px;
+    font-weight: bold;
+}
+
+#control-ring {
+    position: absolute;
+    left: 15px;
+    bottom: 37px;
+}
+
+/* delay effects for all the buttons */
+.button {
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: visible;
+    text-align: center;
+    background-color: gray;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    position: absolute;
+    left: 236px;
+    bottom: 82px;
+    opacity: 0;
+    transition: all 0.4s linear 0.8s;
+    -moz-transition:all 0.4s linear 0.8s; /* Firefox 4 */
+    -webkit-transition: all 0.4s linear 0.8s; /* Safari and Chrome */
+    -o-transition: all 0.4s linear 0.8s; /* Opera */
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.active {
+    background-color: rgba(48, 63, 159, 1);
+    color: #1EC385;
+}
+
+.bubbleactive {
+    background-color: rgba(48, 63, 159, 1);
+}
+
+.inactive {
+    background-color: gray;
+    color: #1EC385;
+}
+
+.numgot {
+    background-color: gray;
+    color: #1EC385;
+}
+
+b {
+    position: absolute;
+    left: 11px;
+    top: 3px;
+    font-size: 29px;
+}
+
+span {
+    display: block;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+    z-index: 2;
+    color: white;
+    position: absolute;
+    left: 25px;
+    bottom: 19px;
+    opacity: 0!important;
+}
+
+.clicked {
+    opacity: 1!important;
+}
+
+.icon-wrap {
+    width: 33px;
+    height: 33px;
+    margin: 163px auto 62px 234px;
+    z-index: 10;
+    overflow: visible;
+}
+
+.icon {
+    background-image: url(../assets/images/atplus_white.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: grey;
+    width: 33px;
+    height: 33px;
+    margin: 20px auto;
+    border-radius: 50%;
+    transition:all 0.2s linear 1.2s;
+    -moz-transition:all 0.2s linear 1.2s; /* Firefox 4 */
+    -webkit-transition:all 0.2s linear 1.2s; /* Safari and Chrome */
+    -o-transition:all 0.2s linear 1.2s; /* Opera */
+}
+
+.icon-wrap:hover {
+    margin: -39px 212px 0px auto;
+    width: 175px;
+    height: 343px;
+}
+
+.icon-wrap:hover .icon {
+    transition:all 0.4s linear;
+    -moz-transition:all 0.4s linear; /* Firefox 4 */
+    -webkit-transition:all 0.4s linear; /* Safari and Chrome */
+    -o-transition:all 0.4s linear; /* Opera */
+    width: 74px;
+    height: 74px;
+    position: absolute;
+    left: 234px;
+    top: 143px;
+    background-image: url(../assets/images/atplus_green.png);
+    background-size: 55px 37px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(48, 63, 159, 1);
+}
+
+/* transition effects for all the buttons */
+.icon-wrap:hover #info-bar {
+    width: 187px;
+    height: 187px;
+    opacity: 1;
+    transform: translate(-80px,-69px);
+    transition:all 0.4s linear;
+    -moz-transition:all 0.4s linear; /* Firefox 4 */
+    -webkit-transition:all 0.4s linear; /* Safari and Chrome */
+    -o-transition:all 0.4s linear; /* Opera */
+}
+
+/* transitin effects for all the buttons */
+.icon-wrap:hover .button {
+    transition:all 0.4s ease-out;
+    -moz-transition:all 0.4s ease-out; /* Firefox 4 */
+    -webkit-transition:all 0.4s ease-out; /* Safari and Chrome */
+    -o-transition:all 0.4s ease-out; /* Opera */
+}
+
+.icon-wrap:hover #mask {
+    width: 40px;
+    height: 40px;
+    opacity: 1;
+    transform: translate(-75px,-7px);
+}
+
+.icon-wrap:hover #history {
+    width: 40px;
+    height: 40px;
+    opacity: 1;
+    transform: translate(-89px,43px);
+}
+
+.icon-wrap:hover #message {
+    overflow: visible;
+    width: 40px;
+    height: 40px;
+    opacity: 1;
+    transform: translate(-71px,90px);
+}
+
+.icon-wrap:hover #setting {
+    width: 40px;
+    height: 40px;
+    opacity: 1;
+    transform: translate(-25px,116px);
+}
+
+.icon-wrap:hover #sign {
+    width: 40px;
+    height: 40px;
+    opacity: 1;
+    transform: translate(29px,112px);
+}
